@@ -1,5 +1,5 @@
 <h1 align="center">
-   Let me ask | realizado juntamente ao NLW TOGETHER
+   Let me ask | NLW TOGETHER
 </h1>
 
 <p align="center">
@@ -14,6 +14,7 @@
 ## 💻 Projeto
 
 O <em>letmeask</em> é um app desenvolvido em ReactJs que contará com área para adm e para usuários e auxiliará o adm a escolher perguntas mais votadas pelos usuários, enquanto os usuários podem fazer suas perguntas e votar nas perguntas que julgar relevantes. Utiliza o Firebase para autenticação e banco de dados.
+- Desenvolvido em `ReactJs` com `create-react-app`
 
 <h4 align="center"> 
 	Status: <br>
