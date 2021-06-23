@@ -22,7 +22,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
     const [user, setUser] = useState<User>();
 
-    // fazer a peresistencia do login
+    // hookie pra fazer a peresistencia do login - dar f5 e continuar logado
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             if(user) {

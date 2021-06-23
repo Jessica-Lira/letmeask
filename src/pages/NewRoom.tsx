@@ -1,11 +1,35 @@
-import { Link } from 'react-router-dom';
+import { FormEvent, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import illustrationImg from '../asserts/images/illustration.svg';
 import logoImg from '../asserts/images/logo.svg';
 import { Button } from '../components/Button';
-//import { AuthContext } from "../contexts/AuthContext";
 import '../styles/auth.scss';
+import { database } from '../services/firebase';
+import { useAuth } from '../hooks/useAuth';
 
 export function NewRoom() {
+    const { user } = useAuth();
+    const history = useHistory();
+    const [newRoom, setNewRoom] = useState(''); //resgata nome da sala
+
+    
+    async function handleCreateRoom(event: FormEvent) {
+        event.preventDefault(); //evitar q form seja enviado a outra page, o q faz a pagina piscar
+
+        if(newRoom.trim() === '') { //valida sala, se vazia n faz nada
+            return;
+        }
+
+        const roomRef = database.ref('rooms'); //banco de dados das salas
+        
+        const firebaseRoom = await roomRef.push({
+            title: newRoom,
+            authorId: user?.id,
+        });
+        
+        history.push(`/rooms/${firebaseRoom.key}`); //redireciona o usuario pra sala criada
+    }
+
     return (
         <div id="page-auth">
             <aside>
@@ -17,10 +41,12 @@ export function NewRoom() {
                 <div className="main-content">
                 <img src={logoImg} alt="letmeask" />
                 <h2>Criar uma nova sala</h2>
-                <form>
+                <form onClick={handleCreateRoom}>
                     <input
                         type="text"
                         placeholder="Nome da sala"
+                        onChange = {event => setNewRoom(event.target.value)}
+                        value = {newRoom}
                     />
                     <Button type="submit">
                         Criar sala
