@@ -32,7 +32,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🚀 Como executar 
 
-<br>
 <h4> 📋 Pré-requisitos </h4>
 - Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 
@@ -40,28 +39,36 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - IDE [VSCode](https://code.visualstudio.com/)
 
-<br>
 
 <h4> 🔧 Instalação </h4>
 
 - Clone o repositório 
 ```
-$ git clone <https://github.com/Jessica-Lira/letmeask>
+$ git clone https://github.com/Jessica-Lira/letmeask
 ```
 
 - Acesse a pasta do projeto no terminal/cmd 
 ```
-$ cd nome-pasta
+$ cd .\letmeask\
 ```
 
-- Instale as dependências com `yarn`
+- Instale as dependências com `yarn` (ou npm)
+```
+$ yarn install
+```
 
-- Inicie o servidor com `yarn start`
+- Inicie o servidor com `yarn` (ou npm)
+```
+$ yarn start
+```
 
-- Acesse [`localhost:3000`](http://localhost:3000) no seu navegador de preferência.
-<br>
+- Aguarde o navegador abrir o [`localhost:3000`](http://localhost:3000) com a aplicação.
+
 
 ## 🚀 Demonstração
 
-Você pode visualizar a aplicação funcionando através do link: <br>
-www.futuramentesiteaqui.com.br
+<h4 align="center">
+  Você pode visualizar a aplicação funcionando através do link: <br>
+  www.futuramentesiteaqui.com.br
+</h4>
+
