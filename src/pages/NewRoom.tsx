@@ -30,6 +30,15 @@ export function NewRoom() {
         history.push(`/rooms/${firebaseRoom.key}`); //redireciona o usuario pra sala criada
     }
 
+    async function fillToCreateRoom(event: FormEvent) {
+        event.preventDefault();
+
+        if(newRoom.trim() === '') { 
+            alert('Enter the room name.');
+            return;
+        }
+    }
+
     return (
         <div id="page-auth">
             <aside>
@@ -48,13 +57,13 @@ export function NewRoom() {
                         onChange = {event => setNewRoom(event.target.value)}
                         value = {newRoom}
                     />
-                    <Button type="submit">
+                    <Button type="submit" onClick={fillToCreateRoom}>
                         Criar sala
                     </Button>
                 </form>
                 <p>
                     Quer entrar em uma sala existente? 
-                    <Link to="/">Clique aqui</Link>
+                    <Link to="/"><strong> Clique aqui</strong></Link>
                 </p>
                 </div>
             </main>

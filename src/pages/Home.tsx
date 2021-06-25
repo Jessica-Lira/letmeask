@@ -23,7 +23,6 @@ export function Home() {
 
     async function handleJoinRoom(event: FormEvent) { //entrar em uma sala
         event.preventDefault();
-
         if(roomCode.trim() === '') { 
             return;
         }
@@ -40,6 +39,15 @@ export function Home() {
             return;
           }
         history.push(`/rooms/${roomCode}`);
+    }
+
+    async function fillToJoinRoom(event: FormEvent) { 
+        event.preventDefault();
+
+        if(roomCode.trim() === '') { // se campo n preenchido, alerta
+            alert('Enter the room code.');
+            return;
+        }
     }
 
     return (
@@ -64,7 +72,7 @@ export function Home() {
                         onChange = {event => setRoomCode(event.target.value)}
                         value = {roomCode}
                     />
-                    <Button type="submit">
+                    <Button type="submit" onClick={fillToJoinRoom}>
                         Entrar na sala
                     </Button>
                 </form>

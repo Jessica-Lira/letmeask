@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import cx from 'classnames';
 import './styles.scss';
 
 type QuestionProps = {
@@ -8,12 +9,25 @@ type QuestionProps = {
         avatar: string;
     };
     children?: ReactNode;
+    isAnswered?: boolean;
+    isHighlighted?: boolean;
 }
 
 //pode fazer desestruturacao de QuestionProps e pegar só o content, author
-export function Question( {content, author, children} : QuestionProps) {
+export function Question( {content, 
+    author,  
+    isAnswered = false,
+    isHighlighted = false,
+    children
+} : QuestionProps) {
     return(
-        <div className="question">
+        <div 
+            className={cx(
+            'question', 
+            { answered: isAnswered },
+            { highlighted: isHighlighted && !isAnswered },
+        )}
+        >
             <p>{content}</p>
             <footer>
                 <div className="user-info">

@@ -1,4 +1,5 @@
 import copyImg from '/JESSICA USER/DOWNLOADS/nlw together/letmeask/src/assets/images/copy.svg';
+
 import './styles.scss';
 
 type RoomCodeProps = {

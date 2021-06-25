@@ -57,6 +57,9 @@ $ cd .\letmeask\
 $ yarn install
 ```
 
+- Atualize as informações para as do seu Firebase: <br>
+Crie uma conta Firebase e Real-Time Database, preencha o arquivo .env com a configuração do seu projeto.
+
 - Inicie o servidor com `yarn` (ou npm)
 ```
 $ yarn start
