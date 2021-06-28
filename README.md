@@ -13,7 +13,7 @@
 
 ## 💻 Projeto
 
-O <em>letmeask</em> é um app desenvolvido em ReactJs que contará com área para adm e para usuários e auxiliará o adm a escolher perguntas mais votadas pelos usuários, enquanto os usuários podem fazer suas perguntas e votar nas perguntas que julgar relevantes. Utiliza o Firebase para autenticação e banco de dados.
+O <em>letmeask</em> é um app desenvolvido em ReactJs que pode ajudar criadores de conteúdo a colocarem perguntas em seus streams com um sistema de classificação baseado em likes. Contará com uma área para admin e outra para usuários, os usuários podem fazer suas perguntas e votar nas perguntas que julgarem relevantes e os admin tem esse resultado em tela. Utiliza o Firebase para autenticação e banco de dados.
 - Desenvolvido em `ReactJs` com `create-react-app`
 
 <h4 align="center"> 
@@ -57,8 +57,8 @@ $ cd .\letmeask\
 $ yarn install
 ```
 
-- Atualize as informações para as do seu Firebase: <br>
-Crie uma conta Firebase e Real-Time Database, preencha o arquivo .env com a configuração do seu projeto.
+- Atualize as informações do arquivo `.env` para as do seu Firebase: <br>
+Crie uma conta Firebase, utilize o recurso Real-Time Database, preencha com a configuração do seu projeto.
 
 - Inicie o servidor com `yarn` (ou npm)
 ```
