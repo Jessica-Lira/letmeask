@@ -13,7 +13,7 @@
 
 ## 💻 Projeto
 
-O <em>letmeask</em> é um app desenvolvido em ReactJs que pode ajudar criadores de conteúdo a colocarem perguntas em seus streams com um sistema de classificação baseado em likes. Contará com uma área para admin e outra para usuários, os usuários podem fazer suas perguntas e votar nas perguntas que julgarem relevantes e os admin tem esse resultado em tela. Utiliza o Firebase para autenticação e banco de dados.
+O <em>letmeask</em> é um app desenvolvido em ReactJs que pode ajudar criadores de conteúdo a colocarem perguntas em seus streams com um sistema de classificação baseado em likes. Com ela você pode criar salas privadas e se tornará o admin, onde somente os que possuem o ID da sala podem acessar, os participantes convidados podem fazer perguntas(desde que estejam logados com o Google) e votar nas perguntas que julgarem relevantes, enquanto os admin tem esse resultado em tela. Utiliza o Firebase para autenticação e banco de dados.
 - Desenvolvido em `ReactJs` com `create-react-app`
 
 <h4 align="center"> 
